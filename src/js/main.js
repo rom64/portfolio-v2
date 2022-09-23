@@ -8,7 +8,7 @@ webpFunctions.isWebp();
 const hamburger = document.querySelector('.hamburger'),
     menu = document.querySelector('.menu'),
     closeBtn = document.querySelector('.menu__close'),
-    lis= document.querySelectorAll('.menu__link'),
+    lis= document.querySelectorAll('.menu__link a'),
      btnTop = document.querySelector('.totop'),
     overlay = document.querySelector('.menu__overlay'),
     linkBtn = document.querySelectorAll('.promo__link');
@@ -40,8 +40,9 @@ let timerId ;
     lis.forEach(item =>{
         item.addEventListener('click', (e)=>{
             e.preventDefault();
-           timerId=setTimeout(fadeMenu, 700);
-            scrollToY(getPositionLink(item));
+
+            scrollToY(getPositionBtn(item.hash));
+            timerId=setTimeout(fadeMenu, 700);
         });
     });
 
@@ -52,11 +53,11 @@ let timerId ;
         })
     });
 
-    function getPositionLink(element){
+    /*function getPositionLink(element){
        let elemHash = element.childNodes[0].hash;
         return getPositionBtn(elemHash);
 
-    }
+    }*/
     function getPositionBtn(elemHash){
         let target = document.querySelector(elemHash),
             paddingTop = parseInt(getComputedStyle(target).paddingTop),
