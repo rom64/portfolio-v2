@@ -1,0 +1,30 @@
+.panel{
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 200px;
+  left: 50px;
+  z-index: 3;
+  align-items: center;
+  &__text{
+    width: 25px;
+    height: 150px;
+
+    span{
+      transform: rotate(-90deg) translate(-30%, -260%);
+      font-weight: bold;
+      display: block;
+      width: 150px;
+    }
+  }
+  &__divider{
+    width: 2px;
+    height: 70px;
+    background-color: black;
+  }
+}
+#telegram{
+  transform: rotate(-90deg);
+}

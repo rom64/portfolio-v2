@@ -1,0 +1,16 @@
+.skills{
+  padding-top: 126px;
+  &__items{
+    display: grid;
+    grid-template: repeat(2, 270px)/repeat(4, 270px);
+    grid-auto-rows: 1fr;
+    gap: 13px;
+    margin: 60px 10px 0 10px;
+  }
+  &__item{
+    border: 1px solid #000;
+    display: block;
+    padding: 20px;
+    overflow: hidden;
+  }
+}

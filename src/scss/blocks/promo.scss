@@ -1,0 +1,54 @@
+.promo{
+  min-height: 100vh;
+  position: relative;
+  background: url("../img/main_bggg-min.jpg") no-repeat 50%/cover;
+  padding-top: 205px;
+
+  & .container{
+    margin-top: 80px;
+    text-shadow: 2px 0 2px orange;
+    & .promo__btns{
+      text-shadow: none;
+    }
+  }
+  &__title{
+    width: 532px;
+    margin-top: 10px;
+  }
+  &__subtitle{
+    position: relative;
+    padding-left: 10px;
+    z-index: 2;
+    &:before{
+      content: '';
+      width: 36px;
+      height:36px ;
+      border-radius: 100%;
+      background: $main-color;
+      position: absolute;
+      top: -5px;
+      left: 0;
+      padding-left: 15px;
+      z-index: -1;
+    }
+  }
+  &__btns{
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    width: 275px;
+    justify-content: space-between;
+  }
+  &__link{
+    color: #000;
+    font-weight: bold;
+    transition: all 0.5s ease-in;
+
+    &:hover{
+      text-decoration: none;
+      background-color: #000;
+      color: $main-color;
+      padding: 12px 25px;
+    }
+  }
+}

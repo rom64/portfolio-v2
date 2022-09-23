@@ -1,0 +1,116 @@
+.localisation{
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  font-size: 24px;
+  &__item{
+    color: #212529;
+    &-active{
+      font-weight: bold;
+    }
+  }
+}
+.hamburger{
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  height: 21px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 999;
+  transition: all 1s ease;
+  span{
+    width: 30px;
+    height: 3px;
+    background: #151813;
+    display: block;
+    position: relative;
+  }
+  span.middle{
+      width: 35px;
+    }
+
+}
+.menu{
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  z-index: 7;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.6s;
+  &.active{
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+  &__block{
+    width: 345px;
+    height: 100%;
+    position: relative;
+    background-color: $main-color;
+    padding-top: 140px;
+    padding-left: 60px;
+    z-index: 10;
+  }
+  &__close{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+  }
+  &__list{
+    list-style: none;
+  }
+  &__link{
+    position: relative;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 15px;
+
+    &:before{
+      content: '';
+      position: absolute;
+      top:10px;
+      left: -35px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 1px solid #000;
+      transition: all 1s;
+    }
+    &:hover{
+      &:before{
+        background-color: #fff;
+      }
+    }
+    a{
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  &__social{
+    width: 70px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: space-between;
+  }
+  &__overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: .75;
+  }
+}
