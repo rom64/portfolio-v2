@@ -5,35 +5,35 @@
 }
 @media (max-width: 1200px) {
   .container{
-    max-width: 960px;
+    max-width: 96rem;
   }
   .promo .title__fs48{
-    font-size: 40px;
+    font-size: 4rem;
   }
   .about{
     &__wrapper{
-      grid-template-columns: 400px 520px;
-      column-gap: 40px;
+      grid-template-columns: 40rem 52rem;
+      column-gap: 4rem;
     }
     &__skills{
-      grid-template: repeat(2, minmax(115px, auto))/repeat(2, 250px);
-      column-gap: 20px;
+      grid-template: repeat(2, minmax(11.5rem, auto))/repeat(2, 25rem);
+      column-gap: 2rem;
       &-item{
-        grid-template-columns: 40px 195px;
-        column-gap: 15px;
+        grid-template-columns: 4rem 19.5rem;
+        column-gap: 1.5rem;
       }
     }
   }
   .skills{
     &__items{
-      grid-template: repeat(2, 270px)/repeat(3, 270px);
+      grid-template: repeat(2, 27rem)/repeat(3, 27rem);
     }
   }
   .portfolio{
     &__items{
-      grid-template-columns: repeat(auto-fit, 280px);
-      grid-auto-rows: 280px;
-      row-gap: 50px;
+      grid-template-columns: repeat(auto-fit, 28rem);
+      grid-auto-rows: 28rem;
+      row-gap: 5rem;
       justify-content: space-around;
       .horizontal, .vertical{
         grid-column: unset;
@@ -65,37 +65,29 @@
 }
 @media (max-width: 992px) {
   .container{
-    max-width: 720px;
-    padding: 10px;
-  }
-  .promo{
-    background: url("../img/bg-mob.jpg") no-repeat 50%/cover;
-
-    & .container{
-      margin-top: 200px;
-
-    }
+    max-width: 72rem;
+    padding: 1rem;
   }
 
   .title{
     &__fs36{
-      font-size: 30px;
+      font-size: 3rem;
     }
   }
   .about{
-    padding-top: 70px;
+    padding-top: 7rem;
     &__wrapper{
-      grid-template-columns: 300px 380px;
-      column-gap: 40px;
+      grid-template-columns: 30rem 38rem;
+      column-gap: 4rem;
     }
     &__photo{
       grid-row: 1/2;
     }
     &__skills{
       grid-template-columns:  repeat(2, auto) ;
-      grid-auto-rows: minmax(115px, auto);
+      grid-auto-rows: minmax(11.5rem, auto);
       &-item{
-        grid-template-columns: 40px 320px;
+        grid-template-columns: 4rem 32rem;
       }
       &-text{
         margin-top: 0;
@@ -104,25 +96,22 @@
   }
   .education{
     &__wrapper{
-      width: 700px;
+      width: 70rem;
     }
   }
   .skills{
     &__items{
-      grid-template: repeat(3, 270px)/repeat(2, 270px);
+      grid-template: repeat(3, 27rem)/repeat(2, 27rem);
       justify-content: space-around;
-      row-gap: 50px;
+      row-gap: 5rem;
     }
   }
 
 }
 @media (max-width: 812px) {
-  .promo .container{
-    margin-top: 250px;
-  }
   .menu{
     &__list{
-      margin-top: -40px;
+      margin-top: -4rem;
     }
     &__social{
       display: none;
@@ -132,39 +121,39 @@
 }
 @media (max-width: 768px){
   .container{
-    max-width: 540px;
+    max-width: 54rem;
     margin-top: 0;
     padding-bottom: 80px;
   }
 
   .promo .title__fs48{
-    font-size: 30px;
-    line-height: 42px;
+    font-size: 3rem;
+    line-height: 4.2rem;
   }
   .title{
     &__fs48{
-      font-size: 28px ;
+      font-size: 2.8rem ;
     }
   }
   .promo{
     &__title{
-      width: 300px;
-      line-height: 40px;
+      width: 30rem;
+      line-height: 4rem;
     }
   }
   .about{
-    padding-top: 40px;
+    padding-top: 4rem;
     &__wrapper{
-      grid-template: 220px auto auto /1fr ;
+      grid-template: 22rem auto auto /1fr ;
     }
     &__photo{
       display: none;
     }
     &__skills{
-      grid-template-columns: repeat(2, 260px);
+      grid-template-columns: repeat(2, 26rem);
       &-item{
-        grid-template-columns: 40px 200px;
-        column-gap: 20px;
+        grid-template-columns: 4rem 20rem;
+        column-gap: 2rem;
       }
     }
   }
@@ -175,35 +164,35 @@
     }
 
     &__wrapper{
-      width: 520px;
-      padding-top: 40px;
+      width: 52rem;
+      padding-top: 4rem;
     }
   }
   .skills{
     &__items{
-      row-gap: 10px;
+      row-gap: 1rem;
     }
   }
   .contacts{
     &__form{
-      grid-template-columns: repeat(2,250px);
+      grid-template-columns: repeat(2,25rem);
     }
   }
 }
 @media (max-width: 576px){
   .container{
     width: 100% ;
-    padding: 0 10px;
+    padding: 0 1rem;
   }
-  .promo .container{
-    margin-top: 70px;
+  .promo .container {
+    margin-top: 0;
   }
   .promo .title__fs48{
-    font-size: 28px;
+    font-size: 2.8rem;
   }
   .promo__link{
-    padding: 12px 25px;
-    margin-bottom: 15px;
+    padding: 1.2rem 2.5rem;
+    margin-bottom: 1.5rem;
     &:last-child{
       background-color:orange;
       color:  black;
@@ -216,18 +205,18 @@
 
   .title{
     &__fs48{
-      font-size: 26px ;
+      font-size: 2.6rem ;
     }
     &__fs36{
-      font-size: 24px;
+      font-size: 2.4rem;
     }
   }
   .hamburger{
-    right: 20px;
+    right: 2rem;
   }
   .menu{
     &__block{
-      width: 250px;
+      width: 25rem;
       //padding-top: 50px;
     }
   }
@@ -236,40 +225,40 @@
     min-height: 60vh;
     padding-top: -1px;
     &__btns{
-      margin-top: 30px;
+      margin-top: 3rem;
     }
   }
   .about{
     padding-top: 0;
     &__wrapper{
-      grid-template: 220px auto auto /1fr ;
+      grid-template: 22rem auto auto /1fr ;
     }
     &__description{
-      padding-top: 40px;
+      padding-top: 4rem;
     }
     &__skills{
       grid-template-columns: 1fr;
       margin-top: 1rem;
     }
     &__skills-item{
-      margin-left: 50px;
-      grid-template-columns: 40px 280px;
+      margin-left: 5rem;
+      grid-template-columns: 4rem 28rem;
     }
   }
   .education{
-    padding-top: 0px;
+    padding-top: 0;
     &__wrapper{
       width: 90%;
     }
   }
   .skills{
     &__items{
-      grid-template-columns: 270px;
-      margin-top: 40px;
+      grid-template-columns: 27rem;
+      margin-top: 4rem;
     }
   }
   .contacts{
-    padding-top: 80px;
+    padding-top: 8rem;
     &__wrapper{
       padding: 0;
     }
@@ -277,28 +266,28 @@
       display: block;
     }
     &__link{
-      margin: 10px;
+      margin: 1rem;
     }
     &__form{
       display: block;
       width: 100%;
     }
     &__input{
-      height: 45px;
-      margin-bottom: 20px;
+      height: 4.5rem;
+      margin-bottom: 2rem;
     }
     &__textarea{
-      margin-bottom: 20px;
+      margin-bottom: 2rem;
     }
     &__trigger{
        display: block;
       text-align: center;
     }
     &__btn{
-      font-size: 12px;
+      font-size: 1.2rem;
     }
     &__policy{
-      margin-top: 20px;
+      margin-top: 2rem;
       display: block;
     }
   }
@@ -311,16 +300,16 @@
   }
   .about__skills-item {
     margin-left: 0;
-    grid-template-columns: 40px 280px;
+    grid-template-columns: 4rem 28rem;
   }
   .menu__social{
-    bottom: 10px;
+    bottom: 1rem;
   }
   .container{
-    padding: 10px;
+    padding: 1rem;
   }
   .education, .skills, .portfolio{
-    padding-top: 50px;
+    padding-top: 5rem;
   }
 }
 @media (max-height: 500px){
@@ -331,6 +320,6 @@
 
 @media (max-height: 400px) {
   .menu__block{
-    padding-top: 90px;
+    padding-top: 9rem;
   }
 }

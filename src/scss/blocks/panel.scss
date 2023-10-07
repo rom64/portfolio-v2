@@ -1,30 +1,40 @@
 .panel{
-  height: 320px;
+  height: 32rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: fixed;
-  top: 200px;
-  left: 50px;
+  top: 20rem;
+  left: 5rem;
   z-index: 3;
   align-items: center;
+  .telegram{
+    transform: rotate(-90deg);
+  }
+  &__link {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      transform: rotate(90deg) scale(1.5);
+    }
+  }
+  &__link.telegram:hover {
+    transform: rotate(0deg) scale(1.5);
+  }
   &__text{
-    width: 25px;
-    height: 150px;
+    width: 2.5rem;
+    height: 15rem;
 
     span{
-      transform: rotate(-90deg) translate(-30%, -260%);
+      transform: rotate(-90deg) translate(-30%, -285%);
       font-weight: bold;
       display: block;
-      width: 150px;
+      width: 15rem;
+      font-size: 1.5rem;
     }
   }
   &__divider{
     width: 2px;
-    height: 70px;
+    height: 7rem;
     background-color: black;
   }
-}
-#telegram{
-  transform: rotate(-90deg);
 }

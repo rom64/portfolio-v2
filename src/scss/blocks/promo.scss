@@ -1,54 +1,127 @@
 .promo{
+  clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
   min-height: 100vh;
   position: relative;
-  background: url("../img/main_bggg-min.jpg") no-repeat 50%/cover;
-  padding-top: 205px;
+  background: url("../img/web.jpg") no-repeat 50%/cover;
+  padding-top: 20.5rem;
 
   & .container{
-    margin-top: 80px;
+    margin-top: 8rem;
     text-shadow: 2px 0 2px orange;
     & .promo__btns{
       text-shadow: none;
     }
   }
   &__title{
-    width: 532px;
-    margin-top: 10px;
+    width: 53rem;
+    margin-top: 1rem;
   }
   &__subtitle{
     position: relative;
-    padding-left: 10px;
+    padding-left: 1rem;
     z-index: 2;
+    animation-name: movingLeft ;
+    animation-duration: 2s;
+    animation-delay: 1s;
     &:before{
       content: '';
-      width: 36px;
-      height:36px ;
+      width: 3.6rem;
+      height:3.6rem ;
       border-radius: 100%;
       background: $main-color;
       position: absolute;
-      top: -5px;
+      top: -0.5rem;
       left: 0;
-      padding-left: 15px;
+      padding-left: 1.5rem;
       z-index: -1;
     }
   }
   &__btns{
-    margin-top: 25px;
+    margin-top: 2.5rem;
     display: flex;
     align-items: center;
-    width: 275px;
+    width: 27.5rem;
     justify-content: space-between;
+    animation-name: movingTop;
+    animation-duration: 2s;
+    animation-delay: 0.7s;
+    transition: all 0.2s;
+
+    & a:hover {
+      transform: translateY(3px);
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    }
+    & a:active {
+      tranform: translateY(1px);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+    }
   }
   &__link{
     color: #000;
     font-weight: bold;
     transition: all 0.5s ease-in;
-
+    border-radius: 0.5rem;
     &:hover{
       text-decoration: none;
       background-color: #000;
       color: $main-color;
-      padding: 12px 25px;
+      padding: 1.2rem 2.5rem;
     }
+  }
+  .title__promo {
+    animation-name: movingRight;
+    animation-duration: 2s;
+    animation-delay: 1s;
+  }
+}
+@keyframes movingLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem) ;
+  }
+  60% {
+    transform: translateX(2rem);
+  }
+  80% {
+    transform: translateX(-2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes movingRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20rem) ;
+  }
+  60% {
+    transform: translateX(-2rem);
+  }
+  80% {
+    transform: translateX(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes movingTop {
+  0% {
+    opacity: 0;
+    transform: translateY(8rem) ;
+  }
+  50% {
+    transform: translateY(-2rem);
+  }
+  75% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
