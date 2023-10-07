@@ -15,9 +15,10 @@ const hamburger = document.querySelector('.hamburger'),
 
 let timerId ;
 
-    hamburger.addEventListener('click', ()=>{
+    hamburger.addEventListener('click', function(){
         menu.classList.add('active');
         document.body.style.overflow = 'hidden';
+        this.style.display = 'none';
     });
     closeBtn.addEventListener('click', fadeMenu);
     window.addEventListener('keydown', (e)=>{
@@ -34,6 +35,7 @@ let timerId ;
     function fadeMenu(){
         menu.classList.remove('active');
         document.body.style.overflow = 'visible';
+        hamburger.style.display = 'flex';
     }
 
 
