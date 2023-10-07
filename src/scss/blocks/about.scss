@@ -33,15 +33,19 @@
   }
   &__skills{
     display: grid;
-    grid-template: repeat(2, minmax(115px, auto))/repeat(2, 260px);
+    grid-template: repeat(2, minmax(12rem, auto))/repeat(2, 30rem);
     grid-auto-rows: 1fr;
-    column-gap:5rem;
-    row-gap: 2rem;
+    gap: 3.5rem;
+    margin-top: -8rem;
     &-item{
       display: grid;
       grid-template-columns: 4rem 20rem;
       column-gap: 2rem;
       transition: all 0.3s ease;
+      transform: skewX(-10deg);
+      background-color: #eee;
+      padding: 1rem;
+      box-shadow: 0 1rem 2rem rgba(black, .2);
       &:hover {
         transform: translateY(-2rem);
       }

@@ -39,7 +39,7 @@
   }
 
   &--back {
-    background-color: orange;
+    background: linear-gradient(to bottom right, yellow 10%, orange 50%, orange 90%) ;
     transform: rotateY(180deg);
     color: black;
     display: flex;

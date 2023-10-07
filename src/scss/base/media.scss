@@ -19,12 +19,14 @@
       grid-template: repeat(2, minmax(11.5rem, auto))/repeat(2, 25rem);
       column-gap: 2rem;
       &-item{
-        grid-template-columns: 4rem 19.5rem;
+        display: block;
         column-gap: 1.5rem;
       }
     }
   }
+
   .skills{
+    padding-top: 15rem ;
     &__items{
       grid-template: repeat(2, 27rem)/repeat(3, 27rem);
     }
@@ -78,12 +80,14 @@
     padding-top: 7rem;
     &__wrapper{
       grid-template-columns: 30rem 38rem;
+      grid-template-rows: minmax(24.5rem, auto);
       column-gap: 4rem;
     }
     &__photo{
-      grid-row: 1/2;
+      display: none;
     }
     &__skills{
+      display: grid;
       grid-template-columns:  repeat(2, auto) ;
       grid-auto-rows: minmax(11.5rem, auto);
       &-item{
@@ -97,6 +101,9 @@
   .education{
     &__wrapper{
       width: 70rem;
+    }
+    .bg-video {
+      top: 80%;
     }
   }
   .skills{
@@ -151,6 +158,7 @@
     }
     &__skills{
       grid-template-columns: repeat(2, 26rem);
+      margin-top: -4rem;
       &-item{
         grid-template-columns: 4rem 20rem;
         column-gap: 2rem;
@@ -166,6 +174,9 @@
     &__wrapper{
       width: 52rem;
       padding-top: 4rem;
+    }
+    &__item {
+      padding-top: 0;
     }
   }
   .skills{
@@ -221,7 +232,6 @@
     }
   }
   .promo{
-   // background: url("../img/main_bggg.jpg") no-repeat 58%/cover;
     min-height: 60vh;
     padding-top: -1px;
     &__btns{
@@ -249,6 +259,10 @@
     padding-top: 0;
     &__wrapper{
       width: 90%;
+      padding-top: 0;
+    }
+    & .bg-video {
+      display: none;
     }
   }
   .skills{
@@ -311,6 +325,7 @@
   .education, .skills, .portfolio{
     padding-top: 5rem;
   }
+
 }
 @media (max-height: 500px){
   .menu__social{
