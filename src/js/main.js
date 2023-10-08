@@ -62,10 +62,9 @@ import * as webpFunctions from "./modules/functions.js";
 
 //slider
     const swiper = new Swiper(".swiper", {
-        loop: true,
         autoplay: true,
         modules: [Autoplay, Navigation, Pagination],
-        slidesPerView: 3,
+
         spaceBetween: 20,
         breakpoints: {
             320: {
@@ -96,8 +95,12 @@ import * as webpFunctions from "./modules/functions.js";
     slides.forEach(slide =>{
         slide.addEventListener('mouseover', ()=>{
             swiper.autoplay.stop();
+            slide.style.zIndex += '1';
+            slide.style.transform = 'scale(1.2)';
         });
-        slide.addEventListener('mouseleave', () => {
+        slide.addEventListener('mouseout', () => {
+            slide.style.zIndex -= '1';
+            slide.style.transform = 'none';
             swiper.autoplay.start();
         })
     })
