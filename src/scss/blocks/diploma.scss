@@ -1,0 +1,48 @@
+@import '../base/variables';
+
+@import 'node_modules/swiper/swiper.scss';
+@import 'node_modules/swiper/modules/pagination';
+@import 'node_modules/swiper/modules/navigation';
+
+
+.diploma {
+  margin-top: 10rem;
+  position: relative;
+  &__wrapper {
+
+    margin-top: 4rem;
+  }
+  &__slider {
+    overflow-y: visible;
+  }
+  &__slide {
+    cursor: pointer;
+    img {
+      width: 100%;
+
+    }
+
+  }
+  .swiper-pagination {
+    position: relative;
+    bottom: -2rem;
+    & span {
+      width: 2rem;
+      height: 2rem;
+      display: inline-block;
+      margin: 0 1rem;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.4s ease-in-out;
+    }
+    & span.swiper-pagination-bullet-active {
+      background-color: $main-color;
+    }
+  }
+  .swiper-button-prev, .swiper-button-next {
+    &::after {
+      color: black;
+      opacity: .6;
+    }
+  }
+}

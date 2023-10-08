@@ -29,6 +29,7 @@
     padding-top: 15rem ;
     &__items{
       grid-template: repeat(2, 27rem)/repeat(3, 27rem);
+      gap: 5rem;
     }
   }
   .portfolio{

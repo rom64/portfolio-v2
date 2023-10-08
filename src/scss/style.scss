@@ -27,6 +27,7 @@ html {
     bottom: 3rem;
     right: 3rem;
     cursor: pointer;
+    z-index: 2;
     img{
         width: 5rem;
         border-radius: 50%;
@@ -63,6 +64,7 @@ html {
 @import 'blocks/about';
 @import 'blocks/education';
 @import 'blocks/skills';
+@import 'blocks/diploma';
 @import 'blocks/portfolio';
 @import 'blocks/contacts';
 @import "base/media";
