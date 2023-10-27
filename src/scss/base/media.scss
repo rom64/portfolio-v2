@@ -177,7 +177,7 @@
       padding-top: 4rem;
     }
     &__item {
-      padding-top: 0;
+      padding-top: 4rem;
     }
   }
   .skills{
@@ -254,6 +254,7 @@
     &__skills-item{
       margin-left: 5rem;
       grid-template-columns: 4rem 28rem;
+      transform: skewX(0);
     }
   }
   .education{

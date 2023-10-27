@@ -150,6 +150,10 @@ import * as webpFunctions from "./modules/functions.js";
             return  false;
         });
     });
-
+//unload page
+window.addEventListener('pagehide', () => {
+    console.log('Goodbye');
+    alert('By');
+})
 
 
