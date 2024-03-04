@@ -49,7 +49,7 @@ import { Column } from "./modules/column.js";
         lis.forEach(item =>{
             item.addEventListener('click', (e)=>{
                 e.preventDefault();
-                scrollToY(getPositionBtn(item.hash));
+                scrollToY(getPositionBtn(item.hash) - 50);
                 timerId=setTimeout(fadeMenu, 700);
             })
         })
@@ -57,7 +57,8 @@ import { Column } from "./modules/column.js";
         linkBtn.forEach(btn =>{
             btn.addEventListener('click', (e)=>{
                 e.preventDefault();
-                scrollToY(getPositionBtn(btn.hash));
+                scrollToY(getPositionBtn(btn.hash) - 50);
+                console.log(btn.hash)
             })
         })
 
@@ -159,18 +160,23 @@ window.addEventListener('pagehide', () => {
 
 
 const canvas = document.querySelector('#canvas');
+const body = document.querySelector('body');
+
+
 const context = canvas.getContext('2d');
 
 const container = document.querySelector('#container-education');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-console.log(canvas.height)
+canvas.width = container.clientWidth;
+canvas.height = container.clientHeight;
 
-const fontSize = 16;
+
+const fontSize = 10;
 
 context.font = `bold ${fontSize}px monospace`;
 
+
 const columns = [];
+
 const columnCount = canvas.width/fontSize;
 for(let i = 0; i < columnCount; i++) {
     columns.push(new Column(i * fontSize, fontSize, canvas.height, context))
