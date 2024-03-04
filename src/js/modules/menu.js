@@ -47,8 +47,7 @@ function menu() {
     lis.forEach(item =>{
         item.addEventListener('click', (e)=>{
             e.preventDefault();
-            console.log(typeof(item.hash))
-            if(item.hash === '#about') {
+            if(item.hash === '#about' && window.innerWidth < 769) {
                 scrollToY(getPositionBtn(item.hash) + 50);
             }else {
                 scrollToY(getPositionBtn(item.hash) - 50);
