@@ -2,7 +2,7 @@
   clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
   min-height: 100vh;
   position: relative;
-  background: url("../img/web.jpg") no-repeat 50%/cover;
+  background: url("../img/web.jpg") no-repeat 0/cover;
   padding-top: 20.5rem;
 
   & .container{
@@ -52,7 +52,7 @@
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
     }
     & a:active {
-      tranform: translateY(1px);
+      transform: translateY(1px);
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
     }
   }

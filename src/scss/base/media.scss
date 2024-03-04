@@ -26,7 +26,7 @@
   }
 
   .skills{
-    padding-top: 15rem ;
+    //padding-top: 15rem ;
     &__items{
       grid-template: repeat(2, 27rem)/repeat(3, 27rem);
       gap: 5rem;
@@ -167,7 +167,8 @@
     }
   }
   .education{
-    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 5rem;
     .container{
       padding-bottom: 0;
     }
@@ -192,6 +193,10 @@
   }
 }
 @media (max-width: 576px){
+  .promo {
+    background: url("../img/web-sm.jpg") no-repeat 0/cover;
+    min-height: 40rem;
+  }
   .container{
     width: 100% ;
     padding: 0 1rem;
@@ -233,8 +238,12 @@
     }
   }
   .promo{
-    min-height: 60vh;
+    max-width: 100%;
+    min-height: auto;
     padding-top: -1px;
+    & .container {
+      text-shadow: none;
+    }
     &__btns{
       margin-top: 3rem;
     }
@@ -247,9 +256,10 @@
     &__description{
       padding-top: 4rem;
     }
+  
     &__skills{
       grid-template-columns: 1fr;
-      margin-top: 1rem;
+      margin-top: 5rem;
     }
     &__skills-item{
       margin-left: 5rem;
@@ -258,7 +268,7 @@
     }
   }
   .education{
-    padding-top: 0;
+    padding-top: 3rem;
     &__wrapper{
       width: 90%;
       padding-top: 0;

@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVDRFT0TTX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-EVDRFT0TTX');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -17,6 +8,7 @@
     <meta name="title" content="Мое портфолио">
     <meta name="description" content="Здесь вы сможете ознакомиться с моими работами и узнать больше обо мне">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="preload" fetchpriority="high" as="image" href="img/web-sm.webp" type="image/webp">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -158,6 +150,7 @@
     </section>
     <section class="education" id="education">
        <div class="container">
+           <canvas id="canvas"></canvas>
            <h2 class="title title__fs16 title__section-title">
                Образование
            </h2>
@@ -166,12 +159,12 @@
            </div>
            <div class="divider"></div>
            <div class="education__wrapper">
-               <div class="bg-video">
-                   <video class="bg-video__content" autoplay muted loop>
-                       <source src="files/video.mp4" type="video/mp4">
-                       Ваш браузер не поддерживает показ видео!
-                   </video>
-               </div>
+<!--               <div class="bg-video">-->
+<!--                   <video class="bg-video__content" autoplay muted loop>-->
+<!--                       <source src="files/video.mp4" type="video/mp4">-->
+<!--                       Ваш браузер не поддерживает показ видео!-->
+<!--                   </video>-->
+<!--               </div>-->
                <h3 class="title title__fs20 education__column-title">Образование </h3>
                <ul>
                    <li>
@@ -248,8 +241,8 @@
                     <div class="skills__item-img">
                         <img width="162" height="37" src="img/icons/skills/jquery.svg" alt="jquery">
                     </div>
-                    <h3 class="title title__fs14">jQuery</h3>
-                    <p>Библиотека Jquery позволит ускорить разработку. Без необходимости интегрировать в проект я её не буду, но навык работы с ней пригодится</p>
+                    <h3 class="title title__fs14">Redux Toolkit</h3>
+                    <p>Пакет Redux Toolkit предназначен для написания стандартной логики Redux. Первоначально он был создан, чтобы помочь решить общие проблемы Redux.</p>
                 </div>
                 <div class="skills__item">
                     <div class="skills__item-img">

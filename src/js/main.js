@@ -1,9 +1,10 @@
-import $ from 'jquery';
+//import $ from 'jquery';
 import 'lazysizes';
 import Swiper from 'swiper';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 import * as webpFunctions from "./modules/functions.js";
+import { Column } from "./modules/column.js";
 
 
     webpFunctions.isWebp();
@@ -135,21 +136,21 @@ import * as webpFunctions from "./modules/functions.js";
     })
 
 //mail
-    $(function(){
-        $('form').submit(function(e){
-            e.preventDefault();
-            $.ajax({
-                type: "POST",
-                url: "files/smart.php",
-                data:$(this).serialize()
-            }).done(function (){
-                $(this).find("input").val("");
+    // $(function(){
+    //     $('form').submit(function(e){
+    //         e.preventDefault();
+    //         $.ajax({
+    //             type: "POST",
+    //             url: "files/smart.php",
+    //             data:$(this).serialize()
+    //         }).done(function (){
+    //             $(this).find("input").val("");
 
-                $("form").trigger("reset");
-            });
-            return  false;
-        });
-    });
+    //             $("form").trigger("reset");
+    //         });
+    //         return  false;
+    //     });
+    // });
 //unload page
 window.addEventListener('pagehide', () => {
     console.log('Goodbye');
@@ -157,3 +158,34 @@ window.addEventListener('pagehide', () => {
 })
 
 
+const canvas = document.querySelector('#canvas');
+const context = canvas.getContext('2d');
+
+const container = document.querySelector('#container-education');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+console.log(canvas.height)
+
+const fontSize = 16;
+
+context.font = `bold ${fontSize}px monospace`;
+
+const columns = [];
+const columnCount = canvas.width/fontSize;
+for(let i = 0; i < columnCount; i++) {
+    columns.push(new Column(i * fontSize, fontSize, canvas.height, context))
+}
+
+
+const column = new Column(100, fontSize, canvas.height, context);
+
+function animate() {
+    context.fillStyle = 'rgba(0, 0, 0, 0.05)';
+    context.fillRect(0, 0, canvas.width, canvas.height);
+    context.fillStyle = "green";
+    columns.forEach(column =>column.drawSymbol() );
+
+    setTimeout(() => requestAnimationFrame(animate), 50);
+}
+
+animate();

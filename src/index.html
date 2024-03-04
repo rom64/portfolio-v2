@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVDRFT0TTX"></script>
-    <script>
+    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVDRFT0TTX"></script>-->
+     <!-- <script async> 
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
         gtag('config', 'G-EVDRFT0TTX');
-    </script>
+    </script> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -17,6 +17,7 @@
     <meta name="title" content="My portfolio">
     <meta name="description" content="About me">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="preload" fetchpriority="high" as="image" href="img/web-sm.webp" type="image/webp">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -161,7 +162,8 @@
         </div>
     </section>
     <section class="education" id="education">
-       <div class="container">
+       <div id="container-education" class="container">
+           <canvas id="canvas"></canvas>
            <h2 class="title title__fs16 title__section-title">
                Education
            </h2>
@@ -170,12 +172,12 @@
            </div>
            <div class="divider"></div>
            <div class="education__wrapper">
-               <div class="bg-video">
+               <!--<div class="bg-video">
                    <video class="bg-video__content" autoplay muted loop>
                         <source src="files/video.mp4" type="video/mp4">
                        Your browser is not supported!
                    </video>
-               </div>
+               </div>-->
                <h3 class="title title__fs20 education__column-title">Education </h3>
                <ul>
                    <li>
@@ -250,10 +252,11 @@
                 </div>
                 <div class="skills__item">
                     <div class="skills__item-img">
-                        <img src="img/icons/skills/jquery.svg" width="162" height="37" alt="jquery">
+                        <img src="img/icons/skills/redux.svg" width="65" height="65" alt="redux">
                     </div>
-                    <h3 class="title title__fs14">jQuery</h3>
-                    <p>Jquery library will speed up development. I will not integrate it without the need to integrate it into the project, but the skill of working with it is useful</p>
+                    <h3 class="title title__fs14">Redux Toolkit</h3>
+                    <p>The Redux Toolkit package is intended to be the standard way to write Redux logic. It was originally created to help address common concerns about Redux.
+                    </p>
                 </div>
                 <div class="skills__item">"
                     <div class="skills__item-img">
@@ -569,6 +572,6 @@
     <a href="#" class="totop">
         <img src="img/totop.jpg" alt="вверх">
     </a>
-    <script src="js/bundle.min.js"></script>
+    <script src="js/bundle.min.js" async></script>
 </body>
 </html>
