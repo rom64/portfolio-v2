@@ -17,7 +17,6 @@
     }
     &__skills{
       grid-template: repeat(2, minmax(11.5rem, auto))/repeat(2, 25rem);
-      column-gap: 2rem;
       &-item{
         display: block;
         column-gap: 1.5rem;
@@ -26,7 +25,6 @@
   }
 
   .skills{
-    //padding-top: 15rem ;
     &__items{
       grid-template: repeat(2, 27rem)/repeat(3, 27rem);
       gap: 5rem;
@@ -78,11 +76,11 @@
     }
   }
   .about{
-    padding-top: 7rem;
     &__wrapper{
       grid-template-columns: 30rem 38rem;
       grid-template-rows: minmax(24.5rem, auto);
       column-gap: 4rem;
+      padding-top: 10rem;
     }
     &__photo{
       display: none;
@@ -151,6 +149,7 @@
   }
   .about{
     padding-top: 4rem;
+    margin-top: 4rem;
     &__wrapper{
       grid-template: 22rem auto auto /1fr ;
     }

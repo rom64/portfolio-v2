@@ -73,6 +73,22 @@
     top: 2.5rem;
     right: 2.5rem;
     cursor: pointer;
+    &:hover {
+      transform: scale(0.7);
+      animation: close 1s ease-in-out;
+
+      @keyframes close {
+        from {
+          transform: rotate(0);
+        }
+        50% {
+          transform: rotate(45deg);
+        }
+        to {
+          transform: rotate(90deg);
+        }
+      }
+    }
   }
   &__list{
     list-style: none;
